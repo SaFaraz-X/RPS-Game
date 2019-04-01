@@ -115,4 +115,3 @@ function main(){
 }
 
 main();
-// need to put main(); because it needs to be defined for its function above it to work
