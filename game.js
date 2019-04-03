@@ -1,13 +1,9 @@
 var userScore = 0;
 var computerScore = 0;
 const userScore_span = document.getElementById("user-score");
-/* the document.getElementById function allows us to access the contents of the user-score id 
-without having to go back and type the name of the literal function (document.getElementById) */
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-// need to put a period(.) before score-board because it was stored as a class in our HTML document
-/* (i think) the document.querySelector function is similar to the document.getElementById function 
-except it's used with thing that are stored as a class and not an id */
+
 const results_p = document.querySelector(".results > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
@@ -19,7 +15,7 @@ function getComputerChoice(){
     return choices[randomNumber];
 }
 
-// the Math.floor function only allows the math.random * 3 output to be WHOLE NUMBERS that are between 0 and 3
+// the Math.floor function only allows the math.random * 3 output to be whole numbers that are between 0 and 3
 
 /* we do the Math.random function to generate a random number that will soon 
 correlate to which option (r, p, or s) the computer will choose in the game */
@@ -29,7 +25,7 @@ are between 0 and 3 */
 
 /* console.log(getComputedChoice()); ...do console.log(getComputChoice()); 
 because it will do exactly what is within its function above 
-(aka generate a random number and then output either r, p, or s as a choice) */
+(generate a random number and then output either r, p, or s as a choice) */
 
 function convertToWord(letter){
     if (letter === "r") return "Rock";
@@ -49,8 +45,6 @@ function win(userChoice, computerChoice){
     document.getElementById(userChoice).classList.add("green-glow");
 
  /* we use the .classList.add to access the green-glow class in our CSS file
- and we do not need to add a "." before green-glow because the .classList allows us to know that
- it's already a class that we don't need to define twice */
 
  setTimeout(function() { document.getElementById(userChoice).classList.remove("green-glow") }, 500 );
  /* the setTimeout element will set a timer for how long the green-glow will stay until it is removed
